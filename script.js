@@ -54,12 +54,15 @@ const createNewTransaction = () => {
   newTransaction.setAttribute('id', ID);
   checkCategory(selectedCategory);
 
+  let newNumber = parseFloat(amountInput.value).toFixed(2);
+  console.log(newNumber);
+
   newTransaction.innerHTML = `
         <p class="transaction-name">
         ${categoryIcon} ${nameInput.value}
         </p>
         <p class="transaction-amount">
-        ${amountInput.value}zł 
+        ${newNumber}zł 
         <button class="delete" onclick="deleteTransatcion(${ID})"><i class="fas fa-times"></i></button>
         </p>
     `;
@@ -99,7 +102,7 @@ const checkCategory = (transaction) => {
 
 const countMoney = (money) => {
   const newMoney = money.reduce((a, b) => a + b);
-  availableMoney.textContent = `${newMoney}zł`;
+  availableMoney.textContent = `${newMoney.toFixed(2)}zł`;
 };
 
 const deleteTransatcion = (id) => {
