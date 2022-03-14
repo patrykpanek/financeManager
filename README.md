@@ -1,3 +1,3 @@
 # FinanceManager
 
-Try it! ```https://patrykpanek.github.io/financeManager/ ```
+Try it! - https://patrykpanek.github.io/financeManager/ 
